@@ -21,6 +21,7 @@ else
 	#creating system user for sonarQube
 	sudo mkdir /opt/sonarqube
 	useradd -m -U -d /opt/sonarqube/ sonar
+	sudo echo "sonar ALL=(ALL) NOPASSWD:ALL" | sudo tee /etc/sudoers.d/sonar
 fi
 	
 
